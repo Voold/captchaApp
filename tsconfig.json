@@ -1,0 +1,48 @@
+{
+  "exclude": ["node_modules"],   // игнорировать
+  "include": ["src/**/*"],      // что компилировать
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    
+
+    // Environment Settings
+    // "module": "nodenext", //современный Node.js ESM/CommonJS, совместим с Express
+    "module": "ESNext",  // вместо "nodenext", чтобы работал import, а не require
+    "moduleResolution": "bundler", 
+    "target": "esnext", // компилирует в новейший JS (Node 24+ поймет)
+    // "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    "types": ["node"],
+    // and npm install -D @types/node (+)
+
+    // Other Outputs
+    "sourceMap": true, //дебаг в Chrome DevTools по TS
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx", // для будущего фронта
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "esModuleInterop": true, // Express импорты (пока хз?)
+    
+  }
+}

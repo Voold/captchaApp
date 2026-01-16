@@ -1,0 +1,5 @@
+controllers/  ← HTTP (req/res, статусы)
+services/     ← Бизнес-логика (фейл капчи, сбор данных)  
+repositories/ ← БД (pg queries, независимо от Express)
+dto/          ← Валидация типов (Zod схемы)
+types/        ← Shared interfaces
